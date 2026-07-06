@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishesh Vishwakarma | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-primary-500 to-indigo-600 bg-clip-text text-transparent">
+                Vishesh<span class="text-primary-500">.</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="#about" class="hover:text-primary-500 transition-colors">About</a>
+                <a href="#skills" class="hover:text-primary-500 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-primary-500 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-primary-500 transition-colors">Projects</a>
+                <a href="#education" class="hover:text-primary-500 transition-colors">Education</a>
+                <a href="#contact" class="hover:text-primary-500 transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-sun hidden dark:inline text-yellow-400"></i>
+                    <i class="fa-solid fa-moon inline dark:hidden text-slate-600"></i>
+                </button>
+                <a href="#contact" class="hidden md:inline-block px-5 py-2.5 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-medium shadow-lg shadow-primary-500/30 transition-all transform hover:-translate-y-0.5">
+                    Hire Me
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4 flex flex-col space-y-4">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#education" class="mobile-link">Education</a>
+            <a href="#contact" class="mobile-link text-primary-500 font-semibold">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-28 pb-16 flex items-center justify-center relative overflow-hidden">
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary-500/10 text-primary-600 dark:text-primary-400 text-sm font-medium border border-primary-500/20">
+                    <span class="w-2 h-2 rounded-full bg-primary-500 animate-ping"></span>
+                    <span>Available for Opportunities</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                    Hi, I'm <span class="bg-gradient-to-r from-primary-500 to-indigo-600 bg-clip-text text-transparent">Vishesh Vishwakarma</span>
+                </h1>
+                <p class="text-xl text-slate-600 dark:text-slate-400 font-medium">
+                    Software Engineer & Full-Stack Web Developer
+                </p>
+                <p class="text-slate-500 dark:text-slate-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    A passionate Computer Science Diploma graduate specializing in Python, Django, and modern web technologies. Dedicated to building secure, user-friendly, and scalable software solutions.
+                </p>
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4">
+                    <a href="#projects" class="px-7 py-3.5 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-xl shadow-primary-600/30 transition-all transform hover:-translate-y-1">
+                        View Projects <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#contact" class="px-7 py-3.5 rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-semibold transition-all">
+                        <i class="fa-solid fa-download ml-1 mr-2"></i> Download Resume
+                    </a>
+                </div>
+                <div class="flex items-center justify-center md:justify-start space-x-5 pt-4 text-slate-500 dark:text-slate-400 text-xl">
+                    <a href="mailto:visheshvishu0007@gmail.com" class="hover:text-primary-500 transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="tel:+919219368147" class="hover:text-primary-500 transition-colors"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://github.com" target="_blank" class="hover:text-primary-500 transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="hover:text-primary-500 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="relative flex justify-center">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full p-2 bg-gradient-to-tr from-primary-500 to-indigo-600 shadow-2xl shadow-primary-500/20">
+                    <!-- Replace 'profile.png' with your actual image file -->
+                    <img src="profile.png" alt="Vishesh Vishwakarma" class="w-full h-full object-cover rounded-full bg-slate-200 dark:bg-slate-800 border-4 border-white dark:border-slate-900" onerror="this.src='https://ui-avatars.com/api/?name=Vishesh+Vishwakarma&size=512&background=0D84C7&color=fff'">
+                    <div class="absolute bottom-4 right-4 bg-white dark:bg-slate-800 px-4 py-2 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700 flex items-center space-x-2 animate-bounce">
+                        <i class="fa-solid fa-award text-yellow-500 text-xl"></i>
+                        <span class="text-xs font-bold">Gold Medalist</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-12 bg-slate-100/50 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-4">
+                <h3 class="text-3xl md:text-4xl font-extrabold text-primary-500 counter" data-target="7.5">0</h3>
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Diploma CGPA Score</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-3xl md:text-4xl font-extrabold text-primary-500"><span class="counter" data-target="10">0</span>+</h3>
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Core Skills & Tools</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-3xl md:text-4xl font-extrabold text-primary-500"><span class="counter" data-target="2">0</span>+</h3>
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Major Projects Built</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-500"><i class="fa-solid fa-trophy"></i> #1</h3>
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Internship Gold Medalist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-sm font-bold tracking-widest text-primary-500 uppercase">About Me</h2>
+            <p class="text-3xl md:text-4xl font-extrabold mt-2">Driven by Curiosity & Engineered for Success</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 md:col-span-2 space-y-4">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white"><i class="fa-solid fa-user-check text-primary-500 mr-2"></i> Professional Summary</h3>
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    I am a final-year Diploma student in Computer Science and Engineering at Government Polytechnic Talbehat, Lalitpur, based in New Delhi. My expertise lies in backend development with Python and Django, alongside robust frontend web development skills.
+                </p>
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    My career objective is to leverage my technical problem-solving skills, object-oriented programming foundations, and leadership abilities within an innovative tech-driven organization. I thrive in collaborative environments where I can build impactful software solutions while continuously expanding my technological horizons.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-sm font-medium">
+                    <div><span class="text-slate-400">Location:</span> New Delhi, India</div>
+                    <div><span class="text-slate-400">Email:</span> visheshvishu0007@gmail.com</div>
+                    <div><span class="text-slate-400">Languages:</span> Hindi & English</div>
+                    <div><span class="text-slate-400">Interest:</span> Full-Stack Web Dev</div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="glass-card p-6 rounded-3xl border border-slate-200 dark:border-slate-800">
+                    <div class="w-12 h-12 rounded-2xl bg-primary-500/10 flex items-center justify-center text-primary-500 text-xl mb-4">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h4 class="font-bold text-lg">Key Strengths</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Strong problem-solving capability, data entry precision, team management, and leadership.</p>
+                </div>
+                <div class="glass-card p-6 rounded-3xl border border-slate-200 dark:border-slate-800">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 text-xl mb-4">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h4 class="font-bold text-lg">Certifications</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">AI Skills Passport Certified, demonstrating readiness for next-generation AI workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-slate-100/60 dark:bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-primary-500 uppercase">Technical Arsenal</h2>
+                <p class="text-3xl md:text-4xl font-extrabold mt-2">Skills & Technologies</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="text-lg font-bold mb-6 flex items-center"><i class="fa-solid fa-code text-primary-500 mr-3"></i> Programming & Logic</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">Python (OOP)</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">Java</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">C++</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">Problem Solving</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">Data Structures</span>
+                    </div>
+                </div>
+                <!-- Web & Frameworks -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="text-lg font-bold mb-6 flex items-center"><i class="fa-solid fa-globe text-primary-500 mr-3"></i> Web Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">Django Framework</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">HTML5</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">CSS3</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">JavaScript</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">Bootstrap</span>
+                    </div>
+                </div>
+                <!-- Tools & Databases -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800">
+                    <h3 class="text-lg font-bold mb-6 flex items-center"><i class="fa-solid fa-database text-primary-500 mr-3"></i> Tools, DB & Soft Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">SQLite / MySQL</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">Git & VS Code</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">MS Excel & Data Entry</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">Team Leadership</span>
+                        <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium text-sm shadow-sm">Communication</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience & Internships -->
+    <section id="experience" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-sm font-bold tracking-widest text-primary-500 uppercase">Career Journey</h2>
+            <p class="text-3xl md:text-4xl font-extrabold mt-2">Internships & Work Experience</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto border-l-2 border-primary-500/30 pl-8 space-y-12 relative">
+            <div class="relative group">
+                <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-primary-500 border-4 border-white dark:border-slate-950 group-hover:scale-125 transition-transform"></div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 uppercase tracking-wider">May 2025 – June 2025</span>
+                <h3 class="text-2xl font-bold mt-2">Python Django Developer Intern</h3>
+                <h4 class="text-lg font-medium text-slate-500 dark:text-slate-400">Techpile Technologies</h4>
+                <div class="mt-4 p-6 glass-card rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+                    <div class="flex items-center space-x-2 text-yellow-500 font-semibold text-sm">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Awarded Gold Medal for outstanding internship performance!</span>
+                    </div>
+                    <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 text-sm space-y-2">
+                        <li>Designed and developed a full-stack web-based Learning Management System (LMS) using Python and Django framework.</li>
+                        <li>Built secure user authentication and role-based access control for students and administrators.</li>
+                        <li>Developed responsive, user-friendly interfaces utilizing HTML5, CSS3, Bootstrap, and JavaScript.</li>
+                        <li>Implemented core features: course creation, enrollment, study material upload, and student progress tracking dashboards.</li>
+                        <li>Integrated database CRUD operations using Django ORM with SQLite/MySQL for secure data management.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-slate-100/60 dark:bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-primary-500 uppercase">Portfolio</h2>
+                <p class="text-3xl md:text-4xl font-extrabold mt-2">Featured Projects</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 flex flex-col group">
+                    <div class="h-60 bg-gradient-to-br from-primary-600 to-indigo-700 relative overflow-hidden flex items-center justify-center p-6">
+                        <i class="fa-solid fa-graduation-cap text-8xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div class="absolute bottom-4 left-4 bg-black/40 backdrop-blur-md text-white px-3 py-1 rounded-lg text-xs font-medium">
+                            Final Year Project
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-bold group-hover:text-primary-500 transition-colors">Online E-Learning Management System (LMS)</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                A comprehensive web platform for course management. Features secure authentication, course enrollment, assignment submissions, and instructor admin panels to manage educational resources efficiently.
+                            </p>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-primary-500/10 text-primary-500">Python</span>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-primary-500/10 text-primary-500">Django</span>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-primary-500/10 text-primary-500">Bootstrap</span>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-primary-500/10 text-primary-500">SQLite/MySQL</span>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-primary-500/10 text-primary-500">JavaScript</span>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+                                <a href="#" class="inline-flex items-center text-sm font-semibold text-primary-500 hover:text-primary-600">
+                                    <i class="fa-solid fa-external-link-alt mr-2"></i> Live Demo
+                                </a>
+                                <a href="#" class="inline-flex items-center text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary-500">
+                                    <i class="fa-brands fa-github mr-2"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 Placeholder -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 flex flex-col group">
+                    <div class="h-60 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden flex items-center justify-center p-6">
+                        <i class="fa-solid fa-code-pull-request text-8xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div class="absolute bottom-4 left-4 bg-black/40 backdrop-blur-md text-white px-3 py-1 rounded-lg text-xs font-medium">
+                            Personal Project
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-bold group-hover:text-primary-500 transition-colors">Python Data & Automation Tool</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                Object-oriented Python application utilizing robust data entry parsing and Excel integrations to streamline workflow management and database records.
+                            </p>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-primary-500/10 text-primary-500">Python OOP</span>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-primary-500/10 text-primary-500">MS Excel API</span>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-primary-500/10 text-primary-500">Git</span>
+                            </div>
+                            <div class="flex items-center space-x-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+                                <a href="#" class="inline-flex items-center text-sm font-semibold text-primary-500 hover:text-primary-600">
+                                    <i class="fa-solid fa-external-link-alt mr-2"></i> View Details
+                                </a>
+                                <a href="#" class="inline-flex items-center text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-primary-500">
+                                    <i class="fa-brands fa-github mr-2"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-sm font-bold tracking-widest text-primary-500 uppercase">Academic Background</h2>
+            <p class="text-3xl md:text-4xl font-extrabold mt-2">Education & Qualifications</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-primary-500 bg-primary-500/10 px-3 py-1 rounded-full">2023 – 2026 (Expected)</span>
+                    <h3 class="text-xl font-bold mt-4">Diploma in Computer Science & Engineering</h3>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1 font-medium">Government Polytechnic Talbehat, Lalitpur</p>
+                </div>
+                <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                    <span class="text-sm text-slate-500">Medium: English</span>
+                    <span class="text-lg font-extrabold text-primary-500">7.5 CGPA</span>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-800 px-3 py-1 rounded-full">Passed: 2023</span>
+                    <h3 class="text-xl font-bold mt-4">Class X Schooling</h3>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1 font-medium">CBSE Board</p>
+                </div>
+                <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                    <span class="text-sm text-slate-500">Medium: English</span>
+                    <span class="text-lg font-extrabold text-slate-700 dark:text-slate-300">63.33%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-slate-100/60 dark:bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-primary-500 uppercase">Credibility & Trust</h2>
+                <p class="text-3xl md:text-4xl font-extrabold mt-2">What Mentors Say</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 relative">
+                    <i class="fa-solid fa-quote-right text-4xl text-primary-500/20 absolute top-6 right-6"></i>
+                    <p class="text-slate-600 dark:text-slate-300 italic mb-6">
+                        "Vishesh demonstrated remarkable problem-solving and full-stack capabilities during his internship at Techpile Technologies. His dedication to mastering Python and Django earned him the Gold Medal among all interns."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold">T</div>
+                        <div>
+                            <h4 class="font-bold text-sm">Project Supervisor</h4>
+                            <p class="text-xs text-slate-500">Techpile Technologies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 relative">
+                    <i class="fa-solid fa-quote-right text-4xl text-primary-500/20 absolute top-6 right-6"></i>
+                    <p class="text-slate-600 dark:text-slate-300 italic mb-6">
+                        "An exceptional student with a strong grip on Object-Oriented Programming and Web Development. He consistently leads team projects with clear communication and technical precision."
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold">G</div>
+                        <div>
+                            <h4 class="font-bold text-sm">Department Faculty</h4>
+                            <p class="text-xs text-slate-500">Govt. Polytechnic Talbehat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-sm font-bold tracking-widest text-primary-500 uppercase">Get In Touch!</h2>
+            <p class="text-3xl md:text-4xl font-extrabold mt-2">Let's Build Something Great Together</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto items-start">
+            <div class="space-y-8">
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
+                    I am actively seeking software engineering internships and junior development roles. Whether you have a question, a project proposal, or just want to connect, feel free to reach out!
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-2xl bg-primary-500/10 flex items-center justify-center text-primary-500 text-xl">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Current Location</h4>
+                            <p class="text-slate-500 text-sm">New Delhi, India</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-2xl bg-primary-500/10 flex items-center justify-center text-primary-500 text-xl">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Phone Number</h4>
+                            <p class="text-slate-500 text-sm">+91-9219368147</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-2xl bg-primary-500/10 flex items-center justify-center text-primary-500 text-xl">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Email Address</h4>
+                            <p class="text-slate-500 text-sm">visheshvishu0007@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contact-form" class="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-6">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Your Name</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 focus:outline-none focus:border-primary-500 transition-colors" placeholder="John Doe">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Email Address</label>
+                    <input type="email" required class="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 focus:outline-none focus:border-primary-500 transition-colors" placeholder="john@example.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Message</label>
+                    <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 focus:outline-none focus:border-primary-500 transition-colors" placeholder="How can we work together?"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold shadow-lg shadow-primary-500/30 transition-all">
+                    Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>© 2026 Vishesh Vishwakarma. All rights reserved.</p>
+            <div class="flex space-x-6 text-lg">
+                <a href="#" class="hover:text-primary-500"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-primary-500"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:visheshvishu0007@gmail.com" class="hover:text-primary-500"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS -->
+    <script>
+        // Dark Mode Toggle
+        const themeBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        themeBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            html.classList.toggle('light');
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Simple Form Submission Alert
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message, Vishesh will get back to you soon!');
+            this.reset();
+        });
+
+        // Number Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 50;
+
+        const startCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = (count + inc).toFixed(target % 1 !== 0 ? 1 : 0);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Trigger counters when in viewport
+        let animated = false;
+        window.addEventListener('scroll', () => {
+            const statsSection = document.querySelector('.counter');
+            if (statsSection && !animated && window.scrollY + window.innerHeight > statsSection.offsetTop) {
+                startCounters();
+                animated = true;
+            }
+        });
+    </script>
+</body>
+</html>
