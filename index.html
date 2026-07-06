@@ -39,6 +39,32 @@
             background: rgba(255, 255, 255, 0.7);
             border: 1px solid rgba(0, 0, 0, 0.08);
         }
+        /* Paste this at the very bottom of your style.css file */
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.glow-ring {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  padding: 5px; 
+  background: linear-gradient(135deg, #00f2fe, #4facfe, #6b11ff);
+  box-shadow: 0 0 30px rgba(79, 172, 254, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #0c101c; 
+}
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
